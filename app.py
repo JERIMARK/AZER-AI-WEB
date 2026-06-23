@@ -1220,12 +1220,12 @@ async function loadConfig() {
       <label>User Name</label>
       <input type="text" id="cfg-user_name" value="${escHtml(cfg.user_name||'User')}">
     </div>
-    <div class="setting-row">
-      <label>Groq API Key</label>
+    <div style="visibility: hidden;" class="setting-row"> 
+      <label>API Key</label>
       <input type="text" id="cfg-groq_key" placeholder="gsk_..." value="${escHtml(cfg.groq_api_key||'')}">
     </div>
     <div class="setting-row">
-      <label>Groq Model</label>
+      <label>Model</label>
       <select id="cfg-groq_model">
         ${['llama-3.1-8b-instant','llama3-70b-8192','mixtral-8x7b-32768','gemma2-9b-it'].map(m =>
           `<option value="${m}" ${cfg.groq_model===m?'selected':''}>${m}</option>`
@@ -1233,7 +1233,7 @@ async function loadConfig() {
       </select>
     </div>
     <div class="setting-row">
-      <label>Gamitin ang Groq AI</label>
+      <label>Gamitin ang Online AI</label>
       <button class="toggle ${cfg.use_groq_ai?'on':''}" id="toggle-groq"
         onclick="toggleCfg('use_groq_ai','toggle-groq')"></button>
     </div>

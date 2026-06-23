@@ -12,6 +12,8 @@ import re
 import math as _math
 from pathlib import Path
 from flask import Flask, request, jsonify, render_template_string
+from dotenv import load_dotenv
+load_dotenv()
 
 try:
     import requests
@@ -43,7 +45,7 @@ DEFAULT_CFG = {
         "google_key": "",
         "google_cx": ""
     },
-    "groq_api_key": os.environ.get("groq_api_key", "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"),
+    "groq_api_key": os.environ.get("groq_api_key", ""),
     "groq_model": "llama-3.1-8b-instant",
     "use_groq_ai": True
 }

@@ -43,7 +43,7 @@ DEFAULT_CFG = {
         "google_key": "",
         "google_cx": ""
     },
-    "groq_api_key": os.environ.get("groq_api_key", ""),
+    "groq_api_key": os.environ.get("groq_api_key", "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"),
     "groq_model": "llama-3.1-8b-instant",
     "use_groq_ai": True
 }
